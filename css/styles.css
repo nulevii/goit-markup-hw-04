@@ -114,7 +114,8 @@ p {
 }
 
 .header-contact-element {
-  display: inline;
+  display: flex;
+  align-items: center;
 
   height: 16px;
   padding: 32px 0;
@@ -136,10 +137,6 @@ p {
   fill: currentColor;
   margin-right: 10px;
   line-height: 14px;
-}
-
-.header-phone-icon {
-  vertical-align: sub;
 }
 
 /* Main */
@@ -279,7 +276,10 @@ p {
   border-radius: 0px 0px 4px 4px;
 
   background-color: var(--color-white);
-  padding-bottom: 30px;
+}
+
+.our-team-element-text-container {
+  padding: 30px 32px;
 }
 
 .our-team-person-image {
@@ -291,7 +291,6 @@ p {
   font-size: 16px;
   line-height: 1.188;
 
-  margin-top: 30px;
   margin-bottom: 10px;
 
   text-align: center;
@@ -308,8 +307,6 @@ p {
   display: flex;
   gap: 10px;
   margin-top: 16px;
-  padding-left: 32px;
-  padding-right: 32px;
 }
 
 .our-team-contact-item {
@@ -350,8 +347,6 @@ p {
 .our-client-element {
   width: 170px;
   height: 92px;
-
-  border-radius: 4px;
 }
 
 .our-client-link {
@@ -362,6 +357,7 @@ p {
   justify-content: center;
   color: var(--color-light-grey);
   border: 1px solid var(--color-light-grey);
+  border-radius: 4px;
 }
 
 .our-client-image {
@@ -420,7 +416,13 @@ p {
   box-sizing: border-box;
 }
 
-.portfolio-element:hover {
+.portfolio-link {
+  display: block;
+  color: var(--color-almost-black);
+  text-decoration: none;
+}
+
+.portfolio-link:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -458,6 +460,7 @@ p {
 
 .footer-container {
   display: flex;
+  align-items: baseline;
 }
 .footer-contacts {
   display: flex;
@@ -506,7 +509,6 @@ p {
 
 .footer-social {
   margin-left: 70px;
-  padding-top: 12px;
 }
 
 .footer-social-sign {
