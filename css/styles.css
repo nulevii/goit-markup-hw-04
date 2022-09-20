@@ -4,9 +4,11 @@
   --color-dark-white: #f5f4fa;
   --color-blue: #2196f3;
   --color-dark-blue: #188ce8;
+  --color-light-grey: #afb1b8;
   --color-grey: #757575;
   --color-dark: #2f303a;
   --color-almost-black: #212121;
+  --color-black-transparent: rgba(255, 255, 255, 0.1);
   --color-black: #000000;
   --color-border-one: #ececec;
   --color-border-two: #eeeeee;
@@ -112,7 +114,7 @@ p {
 }
 
 .header-contact-element {
-  display: block;
+  display: inline;
 
   height: 16px;
   padding: 32px 0;
@@ -129,6 +131,17 @@ p {
   color: var(--color-blue);
 }
 
+.header-mail-icon,
+.header-phone-icon {
+  fill: currentColor;
+  margin-right: 10px;
+  line-height: 14px;
+}
+
+.header-phone-icon {
+  vertical-align: sub;
+}
+
 /* Main */
 /* Studio Page */
 
@@ -138,8 +151,19 @@ p {
 
 .order-section {
   padding: 200px 0;
-  background-color: var(--color-dark);
+  max-width: 1600px;
+  margin: auto;
   text-align: center;
+
+  background-color: var(--color-dark);
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/order-section-background.jpg");
+  /* background: ; */
+  background-size: cover;
+  background-position: center;
 }
 
 .order-section-sign {
@@ -192,6 +216,17 @@ p {
   width: 270px;
 }
 
+.fiture-svg-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  background: var(--color-dark-white);
+  border-radius: 4px;
+}
+
 .fiture-sign {
   font-size: 14px;
   line-height: 1.143;
@@ -210,16 +245,17 @@ p {
 }
 
 .about-us-sign,
-.our-team-sign {
+.our-team-sign,
+.our-clients-sign {
   font-size: 36px;
   line-height: 1.166;
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .about-us-list {
   display: flex;
   gap: 30px;
-  margin-top: 50px;
 }
 
 .about-us-image {
@@ -231,7 +267,6 @@ p {
 }
 
 .our-team-sign {
-  margin-bottom: 50px;
 }
 
 .our-team-list {
@@ -245,6 +280,7 @@ p {
   border-radius: 0px 0px 4px 4px;
 
   background-color: var(--color-white);
+  padding-bottom: 30px;
 }
 
 .our-team-person-image {
@@ -266,8 +302,76 @@ p {
   font-size: 16px;
   line-height: 1.188;
   text-align: center;
-  padding-bottom: 30px;
   color: var(--color-grey);
+}
+
+.our-team-contact-list {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.our-team-contact-item {
+  width: 44px;
+  height: 44px;
+}
+
+.our-team-contact-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: var(--color-light-grey);
+  border-radius: 50%;
+}
+
+.our-team-contact-link:hover {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+}
+
+.our-team-contact-image {
+  fill: currentColor;
+}
+
+.our-clients-section {
+}
+
+.our-clients-sign {
+}
+
+.our-client-list {
+  display: flex;
+  gap: 30px;
+}
+
+.our-client-element {
+  width: 170px;
+  height: 92px;
+
+  border-radius: 4px;
+}
+
+.our-client-link {
+  width: 170px;
+  height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-light-grey);
+  border: 1px solid var(--color-light-grey);
+}
+
+.our-client-image {
+  display: block;
+  fill: currentColor;
+}
+.our-client-link:hover {
+  color: var(--color-blue);
+  border-color: var(--color-blue);
 }
 
 /* Portfolio page */
@@ -296,7 +400,7 @@ p {
 }
 .filter-button:hover {
   color: var(--color-white);
-  background-color: #2196f3;
+  background-color: var(--color-dark-blue);
   cursor: pointer;
 }
 
@@ -346,14 +450,22 @@ p {
   background-color: var(--color-dark);
 }
 
+.footer-container {
+  display: flex;
+}
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+}
+
 .footer-logo {
   width: 145px;
   height: 31px;
   color: var(--color-white);
+  margin-bottom: 20px;
 }
 
 .footer-contacts {
-  margin-top: 20px;
 }
 
 .footer-adress {
@@ -384,4 +496,31 @@ p {
 
 .footer-contact-element:hover {
   color: var(--color-blue);
+}
+
+.footer-social {
+  margin-left: 70px;
+  padding-top: 12px;
+}
+
+.footer-social-sign {
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--color-white);
+  /* margin-bottom: 20px; */
+}
+
+.our-team-contact-list-footer {
+  padding: 0;
+}
+
+.our-team-contact-item-footer {
+}
+
+.our-team-contact-link-footer {
+  color: var(--color-white);
+  background-color: var(--color-black-transparent);
+}
+.our-team-contact-image-footer {
 }
